@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://hujiandong.com').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Papers.Ref.OKsize: 130.12 MB |- [ZZW16]Extreme-Scale Phase Field Simulations of Coarsening Dynamics on the Sunway TaihuLight Supercomputer.pdf - 3.60 MB|- [ZZLCL16]并行自适应有限元软件平台PHG及其应用.pdf - 1.10 MB|-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Papers.Ref.OK">
+<meta property="og:url" content="http://hujiandong.com/2020/papersrefok_512/index.html">
+<meta property="og:site_name" content="Baidu Wang Pan">
+<meta property="og:description" content="Papers.Ref.OKsize: 130.12 MB |- [ZZW16]Extreme-Scale Phase Field Simulations of Coarsening Dynamics on the Sunway TaihuLight Supercomputer.pdf - 3.60 MB|- [ZZLCL16]并行自适应有限元软件平台PHG及其应用.pdf - 1.10 MB|-">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-19T05:24:10.594Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Papers.Ref.OK">
+<meta name="twitter:description" content="Papers.Ref.OKsize: 130.12 MB |- [ZZW16]Extreme-Scale Phase Field Simulations of Coarsening Dynamics on the Sunway TaihuLight Supercomputer.pdf - 3.60 MB|- [ZZLCL16]并行自适应有限元软件平台PHG及其应用.pdf - 1.10 MB|-">
+
+<link rel="canonical" href="http://hujiandong.com/2020/papersrefok_512/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>Papers.Ref.OK | Baidu Wang Pan</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66670171-7"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-66670171-7');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Baidu Wang Pan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/home" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://hujiandong.com/2020/papersrefok_512/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="baidupan">
+      <meta itemprop="description" content="baidupan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Baidu Wang Pan">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Papers.Ref.OK
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-19 13:23:35 / Modified: 13:24:10" itemprop="dateCreated datePublished" datetime="2020-01-19T13:23:35+08:00">2020-01-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/baidu/" itemprop="url" rel="index">
+                    <span itemprop="name">baidu</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Papers-Ref-OK"><a href="#Papers-Ref-OK" class="headerlink" title="Papers.Ref.OK"></a>Papers.Ref.OK</h1><p>size: 130.12 MB</p>
+<p>|- [ZZW16]Extreme-Scale Phase Field Simulations of Coarsening Dynamics on the Sunway TaihuLight Supercomputer.pdf - 3.60 MB<br>|- [ZZLCL16]并行自适应有限元软件平台PHG及其应用.pdf - 1.10 MB<br>|- [YXF16]10M-core scalable fully-implicit solver for nonhydrostatic atmospheric dynamics.pdf - 537.00 kB<br>|- [YHC16]Nonlinear Preconditioning Techniques for Full-Space Lagrange–Newton Solution of PDE-Constrained Optimization Problems.pdf - 2.20 MB<br>|- [YCZC14]A scalable numerical method for simulating flows around high-speed train under crosswind conditions.pdf - 5.60 MB<br>|- [WVV15]Heterogeneous computing on mixed unstructured grids with PyFR.pdf - 1.80 MB<br>|- [WLPV15]Software concepts and numerical algorithms for a scalable adaptive parallel finite element method.pdf - 4.50 MB<br>|- [WC14]A fully implicit domain decomposition based ALE framework for three-dimensional fluid-structure interaction with application in blood flow computation.pdf - 6.30 MB<br>|- [VRRW13]UG 4—A novel flexible software system for simulating PDE based models on high performance computers.pdf - 2.40 MB<br>|- [UG4] UG4 Web page.pdf - 24.20 MB<br>|- [SZS09]Scalable implicit finite element solver for massively parallel processing with demonstration to 160k cores.pdf - 2.40 MB<br>|- [RSC14]Scalable fully implicit finite element flow solver with application to high-fidelity flow control simulations on a realistic wind design.pdf - 4.90 MB<br>|- [QZY16]A highly effective global surface wave numerical simulation with ultra-high resolution.pdf - 488.00 kB<br>|- [PAD13]SU2-an open-source integrated computational environment for multi-physics simulation and design.pdf - 4.30 MB<br>|- [N16]Recent Applications and Algorithm Development Using FUN3D.pdf - 11.20 MB<br>|- [MCRFGM16]A GPU-accelerated compressible RANS solver for Fluid-Structure Interaction simulations in turbomachinery.pdf - 418.00 kB<br>|- [M15]高性能数值模拟编程框架研究进展.pdf - 699.00 kB<br>|- [LZWC17]A Parallel Finite Element Method for 3D Two-Phase Moving Contact Line Problems in Complex Domains.pdf - 5.70 MB<br>|- [LZC16]A programming framework for large scale numerical simulations on unstructured mesh.pdf - 690.00 kB<br>|- [LWCC15]Parallel performance modeling of irregular applications in cell-centered finite volume methods over unstructured tetrahedral meshes.pdf - 2.70 MB<br>|- [LDLD16]High Fidelity, High Order, Large Eddy Simulations of a Real Geometry Aircraft Nose Landing Gear on Hybrid Unstructured Meshes and Small-scale Many-core Computing System.pdf - 2.10 MB<br>|- [LCLZ16]一种求解地震波方程的高效并行谱元格式.pdf - 462.00 kB<br>|- [KPSC06] libMesh A C++ Library for Parallel Adaptive Mesh Refinement Coarsening Simulations.pdf - 1.40 MB<br>|- [KC16_2]Scalability study of an implicit solver for coupled fluid-structure interaction problems on unstructured meshes in 3D.pdf - 2.60 MB<br>|- [KC16]A highly scalable multilevel Schwarz method with boundary geometry preserving coarse spaces for 3D elasticity problems on domains with complex geometry.pdf - 2.40 MB<br>|- [ISS16]parallel unstructured mesh infrastructure.pdf - 1.60 MB<br>|- [HSC15]A parallel adaptive nonlinear elimination preconditioned inexact Newton method for transonic full potential equation.pdf - 1.01 MB<br>|- [GLW16] Space and Time Parallel Multigrid for Optimization and Uncertainty Quantification in PDE Simulations.pdf - 438.00 kB<br>|- [FXCLWN16]大规模结构动力学并行计算与软件研发进展.pdf - 1.10 MB<br>|- [FWXLM15]Some progress on parallel modal and vibration analysis using the JAUMIN framework.pdf - 3.50 MB<br>|- [EPC15]SU2-An Open-Source Suite for Multiphysics Simulation and Design.pdf - 4.20 MB<br>|- [EPA15]Towards high-performance optimizations of the unstructured open-source su2 suite.pdf - 2.70 MB<br>|- [EMB16]Performance optimizations for scalable implicit RANS calculations with SU2.pdf - 1.70 MB<br>|- [DHN12]Production level CFD code acceleration for hybrid many-core architectures.pdf - 553.00 kB<br>|- [DFG16]A block parallel  preconditioner for fluid-structure  interaction in hemodynamics.pdf - 4.30 MB<br>|- [CWYZC14]A parallel domain decomposition method for 3D unsteady incompressible flows at high Reynolds number.pdf - 628.00 kB<br>|- [CDF11]Parallel algorithms for fluid-structure interaction problems in haemodynamics.pdf - 1.60 MB<br>|- [CC16]高可扩展区域分解算法及其在流体模拟和优化问题中的应用.pdf - 7.70 MB<br>|- [BCD16]FUN3D_Manual-13.0.pdf - 1.70 MB<br>|- [AKK16] Al Farhan, M. A., Kaushik, D. K., &amp; Keyes, D. E. Unstructured computational aerodynamics on many integrated core architecture. Parallel Computing, 2016, 59, 97-118..pdf - 2.70 MB</p>
+<p><a href="https://bpcam.bemobtrk.com/go/2ceec3aa-1ca2-46d6-b9ff-aaa5c184517c?jno=512" target="_blank" rel="noopener">How to download</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/paragon_304/" rel="prev" title="Paragon美术资源">
+      <i class="fa fa-chevron-left"></i> Paragon美术资源
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/papers_401/" rel="next" title="Papers">
+      Papers <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Papers-Ref-OK"><span class="nav-number">1.</span> <span class="nav-text">Papers.Ref.OK</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">baidupan</p>
+  <div class="site-description" itemprop="description">baidupan</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">761</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">baidupan</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
