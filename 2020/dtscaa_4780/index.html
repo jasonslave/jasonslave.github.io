@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://jasonslave.github.io').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="DT大数据梦工厂:Scaa深入浅出实size: 888.80 MB 正在跳转中… |- PPT课件 - 0 B|- 第77讲：模式匹配下的提取器动手构造实战.mp4 - 10.20 MB|- 第76讲：模式匹配下的赋值语句.mp4 - 16.30 MB|- 第75讲：模式匹配下的For循环.mp4 - 10.90 MB|- 第74讲：从Spark源码的角度思考Scala中的模式匹配.mp4 - 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DT大数据梦工厂:Scaa深入浅出实">
+<meta property="og:url" content="http://jasonslave.github.io/2020/dtscaa_4780/index.html">
+<meta property="og:site_name" content="Baidu Wang Pan">
+<meta property="og:description" content="DT大数据梦工厂:Scaa深入浅出实size: 888.80 MB 正在跳转中… |- PPT课件 - 0 B|- 第77讲：模式匹配下的提取器动手构造实战.mp4 - 10.20 MB|- 第76讲：模式匹配下的赋值语句.mp4 - 16.30 MB|- 第75讲：模式匹配下的For循环.mp4 - 10.90 MB|- 第74讲：从Spark源码的角度思考Scala中的模式匹配.mp4 - 1">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-19T05:39:23.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DT大数据梦工厂:Scaa深入浅出实">
+<meta name="twitter:description" content="DT大数据梦工厂:Scaa深入浅出实size: 888.80 MB 正在跳转中… |- PPT课件 - 0 B|- 第77讲：模式匹配下的提取器动手构造实战.mp4 - 10.20 MB|- 第76讲：模式匹配下的赋值语句.mp4 - 16.30 MB|- 第75讲：模式匹配下的For循环.mp4 - 10.90 MB|- 第74讲：从Spark源码的角度思考Scala中的模式匹配.mp4 - 1">
+
+<link rel="canonical" href="http://jasonslave.github.io/2020/dtscaa_4780/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>DT大数据梦工厂:Scaa深入浅出实 | Baidu Wang Pan</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66670171-7"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-66670171-7');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Baidu Wang Pan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/home" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://jasonslave.github.io/2020/dtscaa_4780/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="baidupan">
+      <meta itemprop="description" content="baidupan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Baidu Wang Pan">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DT大数据梦工厂:Scaa深入浅出实
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-19 13:39:07 / Modified: 13:39:23" itemprop="dateCreated datePublished" datetime="2020-01-19T13:39:07+08:00">2020-01-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/baidu/" itemprop="url" rel="index">
+                    <span itemprop="name">baidu</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="DT大数据梦工厂-Scaa深入浅出实"><a href="#DT大数据梦工厂-Scaa深入浅出实" class="headerlink" title="DT大数据梦工厂:Scaa深入浅出实"></a>DT大数据梦工厂:Scaa深入浅出实</h1><p>size: 888.80 MB<br> 正在跳转中…</p>
+<p>|- PPT课件 - 0 B<br>|- 第77讲：模式匹配下的提取器动手构造实战.mp4 - 10.20 MB<br>|- 第76讲：模式匹配下的赋值语句.mp4 - 16.30 MB<br>|- 第75讲：模式匹配下的For循环.mp4 - 10.90 MB<br>|- 第74讲：从Spark源码的角度思考Scala中的模式匹配.mp4 - 15.40 MB<br>|- 第73讲：Scala界面和事件处理编程进阶实战.mp4 - 11.40 MB<br>|- 第72讲：Scala界面事件处理编程实战详解.mp4 - 14.70 MB<br>|- 第71讲：Scala界面Panel、Layout实战详解.mp4 - 10.70 MB<br>|- 第70讲：Scala界面GUI编程实战详解.mp4 - 16.50 MB<br>|- 第69讲：Scala并发编程react、loop代码实战详解.mp4 - 16.90 MB<br>|- 第68讲：Scala并发编程原生线程Actor、Case Class下的消息传递和偏函数实战解析及其在Spark中的应用源码解析.mp4 - 50.80 MB<br>|- 第67讲：Scala并发编程匿名Actor、消息传递、偏函数实战解析及其在Spark源码中的应用解析.mp4 - 36.70 MB<br>|- 第66讲：Scala并发编程实战初体验及其在Spark源码中的应用解析.mp4 - 50.00 MB<br>|- 第65讲：Scala中隐式转换内幕操作规则揭秘、最佳实践及其在Spark中的应用源码解析.mp4 - 24.70 MB<br>|- 第64讲：Scala中隐式对象代码实战详解.mp4 - 18.90 MB<br>|- 第63讲：Scala中隐式类代码实战详解.mp4 - 15.40 MB<br>|- 第62讲：Scala中上下文界定内幕中的隐式参数与隐式参数的实战详解及其在Spark中的应用源码解析.mp4 - 22.20 MB<br>|- 第61讲：Scala中隐式参数与隐式转换的联合使用实战详解及其在Spark中的应用源码解析.mp4 - 17.80 MB<br>|- 第60讲：Scala中隐式参数实战详解以及隐式参数在Spark中的应用源码解析.mp4 - 19.30 MB<br>|- 第59讲：Scala中隐式转换初体验实战详解以及隐式转换在Spark中的应用源码解析.mp4 - 41.10 MB<br>|- 第58讲：Scala中Abstract Types实战详解.mp4 - 19.80 MB<br>|- 第57讲：Scala中Dependency Injection实战详解.mp4 - 27.80 MB<br>|- 第56讲：Scala中Self Types实战详解.mp4 - 18.20 MB<br>|- 第55讲：Scala中Infix Type实战详解.mp4 - 21.00 MB<br>|- 第54讲：Scala中复合类型实战详解.mp4 - 25.40 MB<br>|- 第53讲：Scala中结构类型实战详解.mp4 - 22.80 MB<br>|- 第52讲：Scala中路径依赖代码实战详解.mp4 - 23.00 MB<br>|- 第51讲：Scala中链式调用风格的实现代码实战及其在Spark编程中的广泛运用.mp4 - 21.70 MB<br>|- 第50讲：Scala中Variance变化点及其在Spark中的应用源码解析.mp4 - 24.10 MB<br>|- 第49讲：Scala中Variance代码实战及其在Spark中的应用源码解析.mp4 - 24.80 MB<br>|- 第48讲：Scala类型约束代码实战及其在Spark中的应用源码解析.mp4 - 24.80 MB<br>|- 第47讲：Scala多重界定代码实战及其在Spark中的应用源码解析.mp4 - 17.70 MB<br>|- 第46讲： ClassTag 、Manifest、ClassManifest、TypeTag代码实战及其在Spark中的应用源码解析.mp4 - 48.70 MB<br>|- 第45讲：Scala中Context Bounds代码实战及其在Spark中的应用源码解析.mp4 - 22.40 MB<br>|- 第44讲：Scala中View Bounds代码实战及其在Spark中的应用源码解析_Final.mp4 - 33.50 MB<br>|- 第43讲：Scala中类型变量Bounds代码实战及其在Spark中的应用源码解析.mp4 - 38.50 MB<br>|- 第42讲：Scala中泛型类、泛型函数、泛型在Spark中的广泛应用.mp4 - 54.70 MB</p>
+<p><a href="https://bpcam.bemobtrk.com/go/2ceec3aa-1ca2-46d6-b9ff-aaa5c184517c?jno=4780" target="_blank" rel="noopener">How to download</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/dtscaa_4781/" rel="prev" title="DT大数据梦工厂:Scaa深入浅出实">
+      <i class="fa fa-chevron-left"></i> DT大数据梦工厂:Scaa深入浅出实
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/dt_4774/" rel="next" title="DT大数据梦工厂">
+      DT大数据梦工厂 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DT大数据梦工厂-Scaa深入浅出实"><span class="nav-number">1.</span> <span class="nav-text">DT大数据梦工厂:Scaa深入浅出实</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">baidupan</p>
+  <div class="site-description" itemprop="description">baidupan</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4255</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">baidupan</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

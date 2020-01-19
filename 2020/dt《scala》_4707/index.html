@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://jasonslave.github.io').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="DT大数据梦工厂之《Scala深入浅出实战经典》size: 3.47 GB DT大数据梦工厂之《Scala深入浅出实战经典》[MP4] (3.39G) - 高清视频教程 - 我爱学it - www.52studyit.com |- 王家林亲授“DT大数据梦工厂”之《Scala深入浅出实战经典》1-90讲视频源码！.rar - 581.00 kB|- 第9讲：Scala的内部类实战详解.rar -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DT大数据梦工厂之《Scala深入浅出实战经典》">
+<meta property="og:url" content="http://jasonslave.github.io/2020/dt《scala》_4707/index.html">
+<meta property="og:site_name" content="Baidu Wang Pan">
+<meta property="og:description" content="DT大数据梦工厂之《Scala深入浅出实战经典》size: 3.47 GB DT大数据梦工厂之《Scala深入浅出实战经典》[MP4] (3.39G) - 高清视频教程 - 我爱学it - www.52studyit.com |- 王家林亲授“DT大数据梦工厂”之《Scala深入浅出实战经典》1-90讲视频源码！.rar - 581.00 kB|- 第9讲：Scala的内部类实战详解.rar -">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-19T05:39:23.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DT大数据梦工厂之《Scala深入浅出实战经典》">
+<meta name="twitter:description" content="DT大数据梦工厂之《Scala深入浅出实战经典》size: 3.47 GB DT大数据梦工厂之《Scala深入浅出实战经典》[MP4] (3.39G) - 高清视频教程 - 我爱学it - www.52studyit.com |- 王家林亲授“DT大数据梦工厂”之《Scala深入浅出实战经典》1-90讲视频源码！.rar - 581.00 kB|- 第9讲：Scala的内部类实战详解.rar -">
+
+<link rel="canonical" href="http://jasonslave.github.io/2020/dt《scala》_4707/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>DT大数据梦工厂之《Scala深入浅出实战经典》 | Baidu Wang Pan</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66670171-7"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-66670171-7');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Baidu Wang Pan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/home" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://jasonslave.github.io/2020/dt《scala》_4707/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="baidupan">
+      <meta itemprop="description" content="baidupan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Baidu Wang Pan">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DT大数据梦工厂之《Scala深入浅出实战经典》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-19 13:39:07 / Modified: 13:39:23" itemprop="dateCreated datePublished" datetime="2020-01-19T13:39:07+08:00">2020-01-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/baidu/" itemprop="url" rel="index">
+                    <span itemprop="name">baidu</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="DT大数据梦工厂之《Scala深入浅出实战经典》"><a href="#DT大数据梦工厂之《Scala深入浅出实战经典》" class="headerlink" title="DT大数据梦工厂之《Scala深入浅出实战经典》"></a>DT大数据梦工厂之《Scala深入浅出实战经典》</h1><p>size: 3.47 GB<br> DT大数据梦工厂之《Scala深入浅出实战经典》[MP4] (3.39G) - 高清视频教程 - 我爱学it - <a href="http://www.52studyit.com" target="_blank" rel="noopener">www.52studyit.com</a></p>
+<p>|- 王家林亲授“DT大数据梦工厂”之《Scala深入浅出实战经典》1-90讲视频源码！.rar - 581.00 kB<br>|- 第9讲：Scala的内部类实战详解.rar - 17.70 MB<br>|- 第90讲：基于Scala的Actor之上的分布式并发消息驱动框架Akka初体验.rar - 27.00 MB<br>|- 第8讲：Scala主构造器、私有构造器、构造器重载实战详解.rar - 29.80 MB<br>|- 第89讲：Scala中使用For表达式实现内幕思考.rar - 22.40 MB<br>|- 第88讲：Scala中使用For表达式实现map、flatMap、filter.rar - 12.80 MB<br>|- 第87讲：Scala中使用For表达式做查询.rar - 24.40 MB<br>|- 第86讲：Scala中For表达式的生成器、定义和过滤器.rar - 25.40 MB<br>|- 第85讲：Scala中For表达式的强大表现力实战.rar - 28.00 MB<br>|- 第84讲：Scala中List和ListBuffer设计实现思考.rar - 17.50 MB<br>|- 第83讲：Scala中List的实现内幕源码揭秘.rar - 33.50 MB<br>|- 第82讲：Scala中List的ListBuffer是如何实现高效的遍历计算的？.rar - 33.30 MB<br>|- 第81讲：Scala中List的构造是的类型约束逆变、协变、下界详解.rar - 27.90 MB<br>|- 第80讲：List的泛型分析以及：：类和Nil对象.rar - 35.50 MB<br>|- 第7讲：Scala类的属性和对象私有字段实战详解.rar - 37.00 MB<br>|- 第79讲：单例深入讲解及单例背后的链式表达式.rar - 26.20 MB<br>|- 第78讲：Type与Class实战详解.rar - 35.50 MB<br>|- 第77讲：模式匹配下的提取器动手构造实战.rar - 19.80 MB<br>|- 第76讲：模式匹配下的赋值语句.rar - 23.70 MB<br>|- 第75讲：模式匹配下的For循环.rar - 21.80 MB<br>|- 第74讲：从Spark源码的角度思考Scala中的模式匹配.rar - 28.90 MB<br>|- 第73讲：Scala界面和事件处理编程进阶实战.rar - 25.30 MB<br>|- 第72讲：Scala界面事件处理编程实战详解.rar - 26.30 MB<br>|- 第71讲：Scala界面Panel、Layout实战详解.rar - 21.40 MB<br>|- 第70讲：Scala界面GUI编程实战详解.rar - 29.60 MB<br>|- 第69讲：Scala并发编程react、loop代码实战详解.rar - 31.30 MB<br>|- 第68讲：Scala并发编程原生线程Actor、Cass Class下的消息传递和偏函数实战解析及其在Spark中的应用源码解析.rar - 75.80 MB<br>|- 第67讲：Scala并发编程匿名Actor、消息传递、偏函数实战解析及其在Spark源码中的应用解析.rar - 61.30 MB<br>|- 第66讲：Scala并发编程实战初体验及其在Spark源码中的应用解析.rar - 73.40 MB<br>|- 第65讲：Scala中隐式转换内幕操作规则揭秘、最佳实践及其在Spark中的应用源码解析.rar - 40.90 MB<br>|- 第64讲：Scala中隐式对象代码实战详解.rar - 33.40 MB<br>|- 第63讲：Scala中隐式类代码实战详解.rar - 29.20 MB<br>|- 第62讲：Scala中上下文界定内幕中的隐式参数与隐式参数的实战详解及其在Spark中的应用源码解析.rar - 38.70 MB<br>|- 第61讲：Scala中隐式参数与隐式转换的联合使用实战详解及其在Spark中的应用源码解析.rar - 30.30 MB<br>|- 第60讲：Scala中隐式参数实战详解以及隐式参数在Spark中的应用源码解析.rar - 33.70 MB<br>|- 第59讲：Scala中隐式转换初体验实战详解以及隐式转换在Spark中的应用源码解析.rar - 60.40 MB<br>|- 第58讲：Scala中Abstract Types实战详解.rar - 33.20 MB<br>|- 第58讲：Scala中Abstract Types实战详解(1).rar - 19.70 MB<br>|- 第57讲：Scala中Dependency Injection实战详解.rar - 37.20 MB<br>|- 第57讲：Scala中Dependency Injection实战详解(1).rar - 21.70 MB<br>|- 第56讲：Scala中Self Types实战详解.rar - 29.80 MB<br>|- 第55讲：Scala中Infix Type实战详解.rar - 33.90 MB<br>|- 第54讲：Scala中复合类型实战详解.rar - 40.50 MB<br>|- 第53讲：Scala中结构类型实战详解.rar - 34.80 MB<br>|- 第52讲：Scala中路径依赖代码实战详解.rar - 33.40 MB<br>|- 第51讲：Scala中链式调用风格的实现代码实战及其在Spark编程中的广泛运用(1).rar - 20.50 MB<br>|- 第50讲：Scala中Variance变化点及其在Spark中的应用源码解析.rar - 37.90 MB<br>|- 第4讲：For与Function进阶实战、Lazy的使用.rar - 55.00 MB<br>|- 第49讲：Scala中Variance代码实战及其在Spark中的应用源码解析.rar - 33.40 MB<br>|- 第48讲：Scala类型约束代码实战及其在Spark中的应用源码解析.rar - 44.10 MB<br>|- 第47讲：Scala多重界定代码实战及其在Spark中的应用源码解析.rar - 29.50 MB<br>|- 第46讲： ClassTag 、Manifest、ClassManifest、TypeTag代码实战及其在Spark中的应用源码解析.rar - 74.00 MB<br>|- 第45讲：Scala中Context Bounds代码实战及其在Spark中的应用源码解析.rar - 37.60 MB<br>|- 第44讲：Scala中View Bounds代码实战及其在Spark中的应用源码解析.rar - 91.40 MB<br>|- 第43讲：Scala中类型变量Bounds代码实战及其在Spark中的应用源码解析.rar - 64.60 MB<br>|- 第42讲：Scala中泛型类、泛型函数、泛型在Spark中的广泛应用.rar - 91.90 MB<br>|- 第41讲：List继承体系实现内幕和方法操作源码揭秘.rar - 65.90 MB<br>|- 第40讲：Set、Map、TreeSet、TreeMap操作代码实战.rar - 40.00 MB<br>|- 第39讲：ListBuffer、ArrayBuffer、Queue、Stack操作代码实战.rar - 34.90 MB<br>|- 第38讲：List伴生对象操作方法代码实战.rar - 35.20 MB<br>|- 第37讲：List的foldLeft、foldRight、sort操作代码实战.rar - 41.20 MB<br>|- 第36讲：List的partition、find、takeWhile、dropWhile、span、forall、exsists操作代码实战.rar - 32.20 MB<br>|- 第35讲：List的map、flatMap、foreach、filter操作代码实战.rar - 40.70 MB<br>|- 第34讲：对List进行高效的排序和倒排序代码实战.rar - 37.40 MB<br>|- 第33讲：List的一阶函数操作代码实战详解.rar - 56.10 MB<br>|- 第32讲：List的基本操作实战与基于模式匹配的List排序算法实现.rar - 41.10 MB<br>|- 第31讲：Option使用和实现内幕源码揭秘.rar - 21.00 MB<br>|- 第30讲：模式匹配高级实战：嵌套的Case class.rar - 27.60 MB<br>|- 第29讲：Case class和Case object代码实战解析.rar - 29.60 MB<br>|- 第28讲：Scala提取器Extractor实战详解.rar - 19.10 MB<br>|- 第27讲：Type、Array、List、Tuple模式匹配实战解析.rar - 34.10 MB<br>|- 第26讲：Scala中模式匹配入门实战详解.rar - 30.70 MB<br>|- 第25讲：Scala中Curring实战详解.rar - 26.10 MB<br>|- 第24讲：Scala中SAM转换实战详解.rar - 29.40 MB<br>|- 第23讲：Scala高阶函数实战详解.rar - 50.00 MB<br>|- 第22讲：Scala中的闭包实战详解.rar - 17.10 MB<br>|- 第21讲：Scala中的偏函数实战详解.rar - 41.80 MB<br>|- 第20讲：Scala中的本地函数与作为语言一等公民的函数详解.rar - 35.90 MB<br>|- 第19讲：Scala中的正则表达式、与模式匹配结合的的Reg代码实战.rar - 36.80 MB<br>|- 第18讲：Scala中文件的读取、写入、控制台输入操作代码实战.rar - 40.40 MB<br>|- 第17讲：Scala中包、类、对象、成员、伴生类、伴生对象访问权限实战彻底详解.rar - 28.20 MB<br>|- 第16讲：Scala中包的定义、包对象、包的引用、包的隐式引用代码实战.rar - 32.70 MB<br>|- 第15讲：Scala多重继承、多重继承构造器执行顺序及AOP实现.rar - 56.90 MB<br>|- 第14讲：Scala中作为接口的trait、在对象中混入trait代码实战.rar - 39.30 MB<br>|- 第13讲：抽象类、抽象字段、抽象方法.rar - 25.50 MB<br>|- 第12讲：Scala中的继承：超类的构造、重写字段、重写方法代码实战.rar - 26.20 MB<br>|- 第11讲：Scala中的apply实战详解.rar - 38.00 MB<br>|- 第10讲：Scala单例对象、伴生对象实战详解.rar - 35.10 MB<br>|- 6、Map、Tuple、Zip实战解析.rar - 62.90 MB<br>|- 5、Scala数组操作实战详解.rar - 85.60 MB<br>|- 3,Tuple、Array、Map与文件操作入门实战.rar - 41.50 MB<br>|- 2,Scala函数定义、流程控制、异常处理入门实战.rar - 69.20 MB<br>|- 1,Scala开发环境搭建和HelloWorld解析.rar - 59.40 MB</p>
+<p><a href="https://bpcam.bemobtrk.com/go/2ceec3aa-1ca2-46d6-b9ff-aaa5c184517c?jno=4707" target="_blank" rel="noopener">How to download</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/dt：scala__4782/" rel="prev" title="DT大数据梦工厂：Scala深入浅出实战中级-进阶实战">
+      <i class="fa fa-chevron-left"></i> DT大数据梦工厂：Scala深入浅出实战中级-进阶实战
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/dtscaa_4781/" rel="next" title="DT大数据梦工厂:Scaa深入浅出实">
+      DT大数据梦工厂:Scaa深入浅出实 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DT大数据梦工厂之《Scala深入浅出实战经典》"><span class="nav-number">1.</span> <span class="nav-text">DT大数据梦工厂之《Scala深入浅出实战经典》</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">baidupan</p>
+  <div class="site-description" itemprop="description">baidupan</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4255</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">baidupan</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

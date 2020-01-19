@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://jasonslave.github.io').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="booksize: 3.02 GB |- 产品 - 0 B|- ios - 0 B|- front - 0 B|- angularjs - 0 B|- 639070 极客专栏-从0开始学架构 - 0 B|- 597066 数据结构与算法分析 java语言描述（原书第3版） - 0 B|- 架构解密.从分布式到微服务@www.java1234.com.pdf - 78.10 MB|- 高性能Cord">
+<meta property="og:type" content="article">
+<meta property="og:title" content="book">
+<meta property="og:url" content="http://jasonslave.github.io/2020/book_4792/index.html">
+<meta property="og:site_name" content="Baidu Wang Pan">
+<meta property="og:description" content="booksize: 3.02 GB |- 产品 - 0 B|- ios - 0 B|- front - 0 B|- angularjs - 0 B|- 639070 极客专栏-从0开始学架构 - 0 B|- 597066 数据结构与算法分析 java语言描述（原书第3版） - 0 B|- 架构解密.从分布式到微服务@www.java1234.com.pdf - 78.10 MB|- 高性能Cord">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-19T05:39:23.298Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="book">
+<meta name="twitter:description" content="booksize: 3.02 GB |- 产品 - 0 B|- ios - 0 B|- front - 0 B|- angularjs - 0 B|- 639070 极客专栏-从0开始学架构 - 0 B|- 597066 数据结构与算法分析 java语言描述（原书第3版） - 0 B|- 架构解密.从分布式到微服务@www.java1234.com.pdf - 78.10 MB|- 高性能Cord">
+
+<link rel="canonical" href="http://jasonslave.github.io/2020/book_4792/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>book | Baidu Wang Pan</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66670171-7"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-66670171-7');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Baidu Wang Pan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/home" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://jasonslave.github.io/2020/book_4792/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="baidupan">
+      <meta itemprop="description" content="baidupan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Baidu Wang Pan">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          book
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-19 13:39:07 / Modified: 13:39:23" itemprop="dateCreated datePublished" datetime="2020-01-19T13:39:07+08:00">2020-01-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/baidu/" itemprop="url" rel="index">
+                    <span itemprop="name">baidu</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="book"><a href="#book" class="headerlink" title="book"></a>book</h1><p>size: 3.02 GB</p>
+<p>|- 产品 - 0 B<br>|- ios - 0 B<br>|- front - 0 B<br>|- angularjs - 0 B<br>|- 639070 极客专栏-从0开始学架构 - 0 B<br>|- 597066 数据结构与算法分析 java语言描述（原书第3版） - 0 B<br>|- 架构解密.从分布式到微服务@<a href="http://www.java1234.com.pdf" target="_blank" rel="noopener">www.java1234.com.pdf</a> - 78.10 MB<br>|- 高性能CordovaApp开发教程教程(MacOSX版).zip - 31.50 MB<br>|- [Redis.in.Action(2013.6)].Josiah.L.Carlson.文字版.pdf - 7.80 MB<br>|- [RabbitMQ.in.Action(2012.4)].Alvaro.Videla.文字版.pdf - 8.00 MB<br>|- [MySQL.High.Availability(2nd,2014.4)].Charles.Bell.文字版.pdf - 16.50 MB<br>|- [MongoDB.Applied.Design.Patterns(2013.3)].Rick.Copeland.文字版.pdf - 9.30 MB<br>|- [Learning.jQuery(4th,2013.6)].Jonathan.Chaffer.文字版.pdf - 5.50 MB<br>|- [HTML5.The.Missing.Manual(2nd,2013.12)].Matthew.MacDonald.文字版.pdf - 22.20 MB<br>|- [HTML5.in.Action(2014.2)].Rob.Crowther.文字版.pdf - 18.60 MB<br>|- [Gradle.in.Action(2014.2)].Benjamin.Muschko.文字版.pdf - 15.30 MB<br>|- The.Go.Programming.Language.2015.11.pdf - 6.50 MB<br>|- Sitepoint.HTML5.&amp;.CSS3.for.the.Real.World.2nd.Edition.2015.3.pdf - 7.00 MB<br>|- Sitepoint.Full.Stack.JavaScript.Development.with.MEAN.2015.1.pdf - 4.80 MB<br>|- Programming in Objective-C, 6th Edition.pdf - 6.30 MB<br>|- pro android.pdf - 52.80 MB<br>|- Practical.Vim.2nd.Edition.2015.10.pdf - 5.20 MB<br>|- PP.Node.Cookbook.2nd.Edition.2014.4.pdf - 3.60 MB<br>|- Packt.Spring.Microservices.2016.6.pdf - 19.40 MB<br>|- Packt.MEAN.Web.Development.2014.9.pdf - 5.60 MB<br>|- Packt.Machine.Learning.with.Spark.2015.2.pdf - 4.60 MB<br>|- Packt.Getting.Started.with.React.Native.2015.12.pdf - 3.10 MB<br>|- Packt.Getting.Started.with.React.Native.2015.12(1).pdf - 3.10 MB<br>|- Packt.Getting.Started.with.Kubernetes.2nd.Edition.2017.5.pdf - 11.50 MB<br>|- OReilly.Using.Docker.2015.12.pdf - 7.10 MB<br>|- OReilly.Streaming.Systems.2018.7.epub - 31.60 MB<br>|- OReilly.Production-Ready.Microservices.2016.11.pdf - 8.40 MB<br>|- OReilly.MySQL.Cookbook.3rd.Edition.2014.7.pdf - 4.00 MB<br>|- OReilly.Microservice.Architecture.2016.7.pdf - 3.80 MB<br>|- OReilly.Microservice.Architecture.2016.7(1).pdf - 3.80 MB<br>|- OReilly.Learning.Responsive.Web.Design.2014.6.pdf - 42.20 MB<br>|- OReilly.Learning.React.Native.2015.12.pdf - 25.70 MB<br>|- OReilly.Learning.PHP.MySQL.&amp;.JavaScript.4th.Edition.2014.12.pdf - 11.40 MB<br>|- OReilly.Learning.Agile.2014.11.pdf - 44.90 MB<br>|- OReilly.Field.Guide.to.Hadoop.2015.3.pdf - 6.80 MB<br>|- OReilly.Creating.a.Data-Driven.Organization.2015.7.pdf - 10.90 MB<br>|- OReilly.Building.Microservices.2015.2.pdf - 5.80 MB<br>|- O’Reilly.Git.for.Teams.2015.8.pdf - 7.60 MB<br>|- NW.js Essentials.pdf - 3.00 MB<br>|- Nginx HTTP Server, 2nd Edition.pdf - 4.40 MB<br>|- More iPhone Development with Objective-C, 3rd Edition.pdf - 12.20 MB<br>|- MEAN.Machine.2015.3.pdf - 7.80 MB<br>|- Manning.The.Tao.of.Microservices.2017.12.pdf - 17.10 MB<br>|- Manning.Spring.in.Action.4th.Edition.2014.11.pdf - 8.60 MB<br>|- Manning.Spring.Boot.in.Action.2015.12.pdf - 6.60 MB<br>|- Manning.OAuth.2.in.Action.2017.3.pdf - 28.00 MB<br>|- Manning.Node.js.in.Practice.2014.12.pdf - 7.30 MB<br>|- Manning.MongoDB.in.Action.2nd.Edition.2016.3.pdf - 7.50 MB<br>|- Manning.Microservices.Patterns.2018.10.pdf - 7.60 MB<br>|- Manning.Mesos.in.Action.2016.5.pdf - 11.40 MB<br>|- Manning.Java.Persistence.with.Hibernate.2nd.Edition.2015.10.pdf - 12.10 MB<br>|- Manning.Irresistible.APIs.2016.9.pdf - 17.50 MB<br>|- Manning.Irresistible.APIs.2016.9.epub - 4.80 MB<br>|- Manning.Ionic.in.Action.2015.9.pdf - 12.30 MB<br>|- Manning.Git.in.Practice.2014.9.pdf - 6.20 MB<br>|- Manning.Getting.MEAN.with.Mongo.Express.Angular.and.Node.2015.11.pdf - 16.40 MB<br>|- Manning.Docker.in.Action.2016.3.pdf - 8.80 MB<br>|- Learning React Native.pdf - 4.80 MB<br>|- Java语言规范 基于 Java SE 8.pdf - 205.10 MB<br>|- Java核心技术_卷1_基础知识<em>原书第10版</em>中文版扫描<em>带书签已OCR.pdf - 161.80 MB<br>|- Java多线程编程核心技术</em>完整版 PDF电子书下载 带书签目录@<a href="http://www.java1234.com.pdf" target="_blank" rel="noopener">www.java1234.com.pdf</a> - 44.00 MB<br>|- JAVA并发编程  核心方法与框架 ,高洪岩著 ,P356.pdf - 47.30 MB<br>|- iOS.7.By.Tutorials.2014.1.pdf - 144.80 MB<br>|- HTML5指南.pdf - 21.10 MB<br>|- High-Performance.Java.Persistence.pdf - 15.60 MB<br>|- Getting Started with Grunt- The JavaScript Task Runner (2).pdf - 4.60 MB<br>|- dxwzjsjg-hxylyalfx(jb51.net).rar - 52.70 MB<br>|- css3_the_missing_manual_3rd_edition.pdf - 27.20 MB<br>|- Beginning_iPhone_Development_Exploring_the_iOS_SDK__2nd_Edition.pdf - 19.70 MB<br>|- android_api.pdf - 3.20 MB<br>|- androidstudio.pdf - 24.60 MB<br>|- android.pdf - 16.20 MB<br>|- android gui.pdf - 5.90 MB<br>|- Algorithms, 4th Edition.pdf - 28.90 MB<br>|- 653558 Go Web 编程_ Sau Sheong Chang.pdf - 117.00 MB<br>|- 648535 Core Java Volume I Fundamentals 11th Edition.pdf - 44.40 MB<br>|- 632180 Kubernetes实战 ,吴龙辉 ,P272.pdf - 37.10 MB<br>|- 631962 揭秘Java虚拟机-JVM设计原理与实现.pdf - 186.20 MB<br>|- 629960 聊聊架构(书签完整版).pdf - 94.00 MB<br>|- 629273 《大数据之路：阿里巴巴大数据实践》.pdf - 97.50 MB<br>|- 625800 架构探险：从零开始写分布式服务架构+源码.zip - 97.10 MB<br>|- 624746 大数据架构商业之路：从业务需求到技术方案.pdf - 75.00 MB<br>|- 619891 企业IT架构转型之道  阿里巴巴中台战略思想与架构实战<em>钟华(著)</em>机械工业出版社_2017-04-01.pdf - 74.30 MB<br>|- 618145 测试架构师修炼之道 - 刘琛梅  著.pdf - 33.20 MB<br>|- 616727 人人都是架构师+分布式系统架构落地与瓶颈突破.pdf - 43.80 MB<br>|- 615541 深入浅出React和Redux.pdf - 93.40 MB<br>|- 603217 从零开始做运营进阶篇.张亮.pdf - 13.40 MB<br>|- 603171 响应式架构  消息模式Actor实现与Scala.Akka应用集成.pdf - 61.80 MB<br>|- 602492 区块链社会+解码区块链全球应用与投资案例.pdf - 6.80 MB<br>|- 600692 设计模式精解及面试攻略.pdf - 55.10 MB<br>|- 599622 架构即未来 现代企业可扩展的Web架构流程和组织 原书第2版.pdf - 121.10 MB<br>|- 593929 写给大家看的算法书.pdf - 38.30 MB<br>|- 593205 Scrum敏捷软件开发.pdf - 55.30 MB<br>|- 592880 Docker_jb51.rar - 33.70 MB<br>|- 590559 轻松学算法 互联网算法面试宝典 ,赵烨.pdf - 50.30 MB</p>
+<p><a href="https://bpcam.bemobtrk.com/go/2ceec3aa-1ca2-46d6-b9ff-aaa5c184517c?jno=4792" target="_blank" rel="noopener">How to download</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/bookboonbook_2827/" rel="prev" title="bookboon网站book">
+      <i class="fa fa-chevron-left"></i> bookboon网站book
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/book_3511/" rel="next" title="Book等">
+      Book等 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#book"><span class="nav-number">1.</span> <span class="nav-text">book</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">baidupan</p>
+  <div class="site-description" itemprop="description">baidupan</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4255</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">baidupan</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

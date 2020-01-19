@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://jasonslave.github.io').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="7-3 RNA-seq数据分析.mp4size: 30.90 MB 网盘搜索探索云盘界面简洁 |- 9-s3 学生演示KOBAS.mp4 - 8.00 MB|- 9-s2 KOBAS演示.mp4 - 17.90 MB|- 9-s1 数据库系统简介.mp4 - 14.00 MB|- 9-5 应用：药物成瘾共同分子通路的鉴定.mp4 - 14.80 MB|- 9-4 分子通路鉴定.mp4 - 30.1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7-3 RNA-seq数据分析.mp4">
+<meta property="og:url" content="http://jasonslave.github.io/2020/7_3_rna_seqmp4_4303/index.html">
+<meta property="og:site_name" content="Baidu Wang Pan">
+<meta property="og:description" content="7-3 RNA-seq数据分析.mp4size: 30.90 MB 网盘搜索探索云盘界面简洁 |- 9-s3 学生演示KOBAS.mp4 - 8.00 MB|- 9-s2 KOBAS演示.mp4 - 17.90 MB|- 9-s1 数据库系统简介.mp4 - 14.00 MB|- 9-5 应用：药物成瘾共同分子通路的鉴定.mp4 - 14.80 MB|- 9-4 分子通路鉴定.mp4 - 30.1">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-19T05:39:23.278Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="7-3 RNA-seq数据分析.mp4">
+<meta name="twitter:description" content="7-3 RNA-seq数据分析.mp4size: 30.90 MB 网盘搜索探索云盘界面简洁 |- 9-s3 学生演示KOBAS.mp4 - 8.00 MB|- 9-s2 KOBAS演示.mp4 - 17.90 MB|- 9-s1 数据库系统简介.mp4 - 14.00 MB|- 9-5 应用：药物成瘾共同分子通路的鉴定.mp4 - 14.80 MB|- 9-4 分子通路鉴定.mp4 - 30.1">
+
+<link rel="canonical" href="http://jasonslave.github.io/2020/7_3_rna_seqmp4_4303/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>7-3 RNA-seq数据分析.mp4 | Baidu Wang Pan</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66670171-7"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-66670171-7');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Baidu Wang Pan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/home" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://jasonslave.github.io/2020/7_3_rna_seqmp4_4303/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="baidupan">
+      <meta itemprop="description" content="baidupan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Baidu Wang Pan">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          7-3 RNA-seq数据分析.mp4
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-19 13:39:07 / Modified: 13:39:23" itemprop="dateCreated datePublished" datetime="2020-01-19T13:39:07+08:00">2020-01-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/baidu/" itemprop="url" rel="index">
+                    <span itemprop="name">baidu</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="7-3-RNA-seq数据分析-mp4"><a href="#7-3-RNA-seq数据分析-mp4" class="headerlink" title="7-3 RNA-seq数据分析.mp4"></a>7-3 RNA-seq数据分析.mp4</h1><p>size: 30.90 MB<br> 网盘搜索<em>探索云盘</em>界面简洁</p>
+<p>|- 9-s3 学生演示KOBAS.mp4 - 8.00 MB<br>|- 9-s2 KOBAS演示.mp4 - 17.90 MB<br>|- 9-s1 数据库系统简介.mp4 - 14.00 MB<br>|- 9-5 应用：药物成瘾共同分子通路的鉴定.mp4 - 14.80 MB<br>|- 9-4 分子通路鉴定.mp4 - 30.10 MB<br>|- 9-3 GO注释.mp4 - 16.30 MB<br>|- 9-2 KEGG分子通路数据库.mp4 - 17.20 MB<br>|- 9-1 本体论和基因本体论.mp4 - 37.80 MB<br>|- 8-s2 illumina Hiseq &amp; Miseq测序仪介绍.mp4 - 37.70 MB<br>|- 8-s1 变量选择与聚类分析.mp4 - 74.50 MB<br>|- 8-3 数据挖掘- 差异表达与聚类分析.mp4 - 19.50 MB<br>|- 8-2 数据挖掘- 长非编码RNA的鉴定.mp4 - 16.90 MB<br>|- 8-1 从信息到知识.mp4 - 19.50 MB<br>|- 7-s6 Maynard Olson教授访谈.mp4 - 29.60 MB<br>|- 7-s5 学生实践.mp4 - 12.80 MB<br>|- 7-s4 学生课堂报告.mp4 - 14.90 MB<br>|- 7-s3 学生课堂报告.mp4 - 11.00 MB<br>|- 7-s2 学生课堂报告.mp4 - 13.40 MB<br>|- 7-s1 学生课堂报告.mp4 - 18.50 MB<br>|- 7-3 RNA-seq数据分析.mp4 - 30.90 MB<br>|- 7-2 RNA测序数据回贴与组装.mp4 - 18.50 MB<br>|- 7-1 转录组介绍.mp4 - 22.30 MB<br>|- 6-s2 学生课堂报告.mp4 - 18.30 MB<br>|- 6-S1 支持向量机简介.mp4 - 31.40 MB<br>|- 6-4 基于机器学习分类器的预测方法：SAPRED.mp4 - 29.20 MB<br>|- 6-3 基于保守性和规则的预测方法：SIFT和PolyPhen.mp4 - 33.60 MB<br>|- 6-2 记录变异的数据库.mp4 - 19.60 MB<br>|- 6-1 变异的功能预测-问题概述.mp4 - 27.60 MB<br>|- 5-s4 Sanger测序介绍.mp4 - 9.20 MB<br>|- 5-s3 Ion Torrent PGM测序介绍.mp4 - 23.10 MB<br>|- 5-S2 关于基因型鉴定的补充材料.mp4 - 25.60 MB<br>|- 5-s1 关于回帖、变异鉴定的补充材料.mp4 - 15.70 MB<br>|- 5-3 序列回帖和变异鉴定的分析演示.mp4 - 22.60 MB<br>|- 5-2 序列回帖和变异鉴定.mp4 - 24.10 MB<br>|- 5-1 新一代测序.mp4 - 20.40 MB<br>|- 4-s3 学生课堂报告.mp4 - 10.20 MB<br>|- 4-s2 学生课堂报告.mp4 - 14.00 MB<br>|- 4-s1 学生课堂报告.mp4 - 23.60 MB<br>|- 4-3 用隐马尔可夫模型建立预测模型.mp4 - 15.60 MB<br>|- 4-2 隐马尔科夫模型.mp4 - 17.10 MB<br>|- 4-1 从状态到马尔可夫链.mp4 - 14.80 MB<br>|- 3-s1 学生课堂报告.mp4 - 19.50 MB<br>|- 3-2 Blast算法初探.mp4 - 21.30 MB<br>|- 3-1 序列数据库.mp4 - 19.60 MB<br>|- 2-s4 学生课堂报告.mp4 - 14.50 MB<br>|- 2-s3 学生课堂报告.mp4 - 24.70 MB<br>|- 2-s2 Waterman教授访谈.mp4 - 61.60 MB<br>|- 2-s1 关于同源、相似性、相似性矩阵和点阵图.mp4 - 17.10 MB<br>|- 2-4 考虑仿射空位罚分的序列比对.mp4 - 13.30 MB<br>|- 2-3 从全局比对到局部比对.mp4 - 13.20 MB<br>|- 2-2 利用动态规划进行全局比对.mp4 - 23.90 MB<br>|- 2-1 序列比对中的基本概念.mp4 - 29.40 MB<br>|- 12-s2 学生课堂报告.mp4 - 12.10 MB<br>|- 12-S1 裴钢教授访谈.mp4 - 50.10 MB<br>|- 12-3 从干实验到湿实验——一个演化问题 第2部分.mp4 - 14.90 MB<br>|- 12-2 裴钢教授关于研究背景的介绍.mp4 - 62.40 MB<br>|- 12-1 从干实验到湿实验——一个演化问题 第1部分.mp4 - 16.30 MB<br>|- 11-s1 学生课堂报告.mp4 - 16.00 MB<br>|- 11-4 Origination of de novo Genes from Noncoding RNAs  (chinese version) 从非编码RNA起源的从头起源新基因 (中文版) [18-52].mp4 - 30.60 MB<br>|- 11-3 A Human-Specific de novo Gene Associated with Addiction  (chinese version) 一个与成瘾相关的人类特异的从头起源的新基因 (中文版) [11-30].mp4 - 20.40 MB<br>|- 11-2 New Gene Evolution Detected by Genomic Computation- A Driver for Human Brain Evolution  (chinese version) 新基因鉴定及演化分析- 大脑演化的驱动力 (中文版) [13-15].mp4 - 21.30 MB<br>|- 11-1 New Gene Evolution Detected by Genomic Computation- Basic Concepts and Examples  (chinese version) 新基因鉴定及演化分析- 概念与实例 (中文版) [32-37].mp4 - 48.90 MB<br>|- 10-s1 学生介绍CBI资源.mp4 - 11.20 MB<br>|- 10-5 其他主要生物信息资源.mp4 - 13.10 MB<br>|- 10-4 UCSC Genome Browser (chinese version) UCSC基因组浏览器 (中文版) [05-28].mp4 - 14.10 MB<br>|- 10-3 欧洲生物信息中心(EBI)资源.mp4 - 21.40 MB<br>|- 10-2 美国国家生物信息中心(NCBI)资源.mp4 - 22.00 MB<br>|- 10-1 生物信息资源概览.mp4 - 29.80 MB<br>|- 1-4 中国大陆的生物信息学.mp4 - 15.10 MB<br>|- 1-3 生物信息学历史.mp4 - 57.80 MB<br>|- 1-2 什么是生物信息学.mp4 - 30.80 MB<br>|- 1-1 课程介绍.mp4 - 18.60 MB</p>
+<p><a href="https://bpcam.bemobtrk.com/go/2ceec3aa-1ca2-46d6-b9ff-aaa5c184517c?jno=4303" target="_blank" rel="noopener">How to download</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/7_4674/" rel="prev" title="第7季(生肉)">
+      <i class="fa fa-chevron-left"></i> 第7季(生肉)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/7_121024x768jpg_1911/" rel="next" title="曲包7-12封面[1024x768][JPG]">
+      曲包7-12封面[1024x768][JPG] <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#7-3-RNA-seq数据分析-mp4"><span class="nav-number">1.</span> <span class="nav-text">7-3 RNA-seq数据分析.mp4</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">baidupan</p>
+  <div class="site-description" itemprop="description">baidupan</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4255</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">baidupan</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

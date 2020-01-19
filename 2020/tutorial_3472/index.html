@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://jasonslave.github.io').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="tutorialsize: 1.70 GB |- 9 Linux Sysadmin Basics 4.1 – Filtering Output and Finding Things (&amp;amp;&amp;amp;, cut, sort, uniq, wc, grep)-nLa6jAbULe8.mp4 - 13.70 MB|- 9 Linux Sysadmin Basics 4.1 – Filtering">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tutorial">
+<meta property="og:url" content="http://jasonslave.github.io/2020/tutorial_3472/index.html">
+<meta property="og:site_name" content="Baidu Wang Pan">
+<meta property="og:description" content="tutorialsize: 1.70 GB |- 9 Linux Sysadmin Basics 4.1 – Filtering Output and Finding Things (&amp;amp;&amp;amp;, cut, sort, uniq, wc, grep)-nLa6jAbULe8.mp4 - 13.70 MB|- 9 Linux Sysadmin Basics 4.1 – Filtering">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-19T05:39:23.366Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="tutorial">
+<meta name="twitter:description" content="tutorialsize: 1.70 GB |- 9 Linux Sysadmin Basics 4.1 – Filtering Output and Finding Things (&amp;amp;&amp;amp;, cut, sort, uniq, wc, grep)-nLa6jAbULe8.mp4 - 13.70 MB|- 9 Linux Sysadmin Basics 4.1 – Filtering">
+
+<link rel="canonical" href="http://jasonslave.github.io/2020/tutorial_3472/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>tutorial | Baidu Wang Pan</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66670171-7"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-66670171-7');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Baidu Wang Pan</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/home" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://jasonslave.github.io/2020/tutorial_3472/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="baidupan">
+      <meta itemprop="description" content="baidupan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Baidu Wang Pan">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          tutorial
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-19 13:39:07 / Modified: 13:39:23" itemprop="dateCreated datePublished" datetime="2020-01-19T13:39:07+08:00">2020-01-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/baidu/" itemprop="url" rel="index">
+                    <span itemprop="name">baidu</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="tutorial"><a href="#tutorial" class="headerlink" title="tutorial"></a>tutorial</h1><p>size: 1.70 GB</p>
+<p>|- 9 Linux Sysadmin Basics 4.1 – Filtering Output and Finding Things (&amp;&amp;, cut, sort, uniq, wc, grep)-nLa6jAbULe8.mp4 - 13.70 MB<br>|- 9 Linux Sysadmin Basics 4.1 – Filtering Output and Finding Things (&amp;&amp;, cut, sort, uniq, wc, grep)-nLa6jAbULe8.en.ass - 15.00 kB<br>|- 8 Linux Sysadmin Basics 04 – Shell Features – Pipes and Redirection–Z5tCri-QlI.mp4 - 61.00 MB<br>|- 8 Linux Sysadmin Basics 04 – Shell Features – Pipes and Redirection–Z5tCri-QlI.en.ass - 33.00 kB<br>|- 7 Linux Sysadmin Basics 03 – Text Editors (and review of basic commands)-fEGSA68uAR4.mp4 - 38.40 MB<br>|- 7 Linux Sysadmin Basics 03 – Text Editors (and review of basic commands)-fEGSA68uAR4.en.ass - 30.00 kB<br>|- 6 Linux Command-Line for Beginners - What’s happening on this machine-EbOEqycEFeM.mp4 - 32.50 MB<br>|- 6 Linux Command-Line for Beginners - What’s happening on this machine-EbOEqycEFeM.en.ass - 21.00 kB<br>|- 50 10 Questions You NEED to Ask During Your Tech Job Interview-s9XPTay-x8g.mp4 - 85.70 MB<br>|- 50 10 Questions You NEED to Ask During Your Tech Job Interview-s9XPTay-x8g.en.ass - 36.00 kB<br>|- 5 Linux Sysadmin Basics 02.1 – More Basic Commands-ZeZVkA1zjWg.mp4 - 18.50 MB<br>|- 5 Linux Sysadmin Basics 02.1 – More Basic Commands-ZeZVkA1zjWg.en.ass - 21.00 kB<br>|- 49 MySQL_MariaDB Basics (RHCE Study)-qxPnGlIxYC8.mp4 - 30.80 MB<br>|- 49 MySQL_MariaDB Basics (RHCE Study)-qxPnGlIxYC8.en.ass - 38.00 kB<br>|- 48 How to Backup and Restore a MySQL_MariaDB Database-vIIRuDtG1yI.mp4 - 15.30 MB<br>|- 48 How to Backup and Restore a MySQL_MariaDB Database-vIIRuDtG1yI.en.ass - 19.00 kB<br>|- 47 Linux Command - ‘tee’ - Watch &amp; Log Command Output-09v8vDOpdYo.mp4 - 8.60 MB<br>|- 47 Linux Command - ‘tee’ - Watch &amp; Log Command Output-09v8vDOpdYo.en.ass - 14.00 kB<br>|- 46 Sublime Text Basics - All the Best Features in One Video-zIkg3Oo1PVM.mp4 - 35.70 MB<br>|- 46 Sublime Text Basics - All the Best Features in One Video-zIkg3Oo1PVM.en.ass - 37.00 kB<br>|- 45 Linux Documentation In 2017-59jnWX_EzTY.mp4 - 75.70 MB<br>|- 45 Linux Documentation In 2017-59jnWX_EzTY.en.ass - 44.00 kB<br>|- 44 Ansible 2 For Beginners - Linux Automation Course Overview-CFmcWt9YXHk.mp4 - 16.60 MB<br>|- 44 Ansible 2 For Beginners - Linux Automation Course Overview-CFmcWt9YXHk.en.ass - 12.00 kB<br>|- 43 Resources for Becoming a Linux System Administrator-oGLgd1PGe1k.mp4 - 63.70 MB<br>|- 43 Resources for Becoming a Linux System Administrator-oGLgd1PGe1k.en.ass - 31.00 kB<br>|- 42 What Every Sysadmin Needs to Know about Tech Debt-WqirNEFPh5Y.mp4 - 22.00 MB<br>|- 42 What Every Sysadmin Needs to Know about Tech Debt-WqirNEFPh5Y.en.ass - 34.00 kB<br>|- 41 Service Management with systemd (Hands-On Linux Course Preview)-JX2lxKJC6yI.mp4 - 12.80 MB<br>|- 41 Service Management with systemd (Hands-On Linux Course Preview)-JX2lxKJC6yI.en.ass - 13.00 kB<br>|- 40 Linux System Monitoring with Monit, part 2 - SSH Local Forwarding for our Web Dashboard-ThcaW4MVGLY.mp4 - 11.60 MB<br>|- 40 Linux System Monitoring with Monit, part 2 - SSH Local Forwarding for our Web Dashboard-ThcaW4MVGLY.en.ass - 15.00 kB<br>|- 4 Linux Sysadmin Basics 02 – Basic Commands-Lbh8Bh_SEzU.mp4 - 57.40 MB<br>|- 4 Linux Sysadmin Basics 02 – Basic Commands-Lbh8Bh_SEzU.en.ass - 48.00 kB<br>|- 39 Monitoring Linux Systems and Services with Monit (Hands-On Linux Course Preview)-wiRt3mY7Rrw.mp4 - 31.80 MB<br>|- 39 Monitoring Linux Systems and Services with Monit (Hands-On Linux Course Preview)-wiRt3mY7Rrw.en.ass - 25.00 kB<br>|- 38 8 Basic lsof Commands Every Sysadmin Needs to Know-rLgRkjM7amo.mp4 - 72.40 MB<br>|- 38 8 Basic lsof Commands Every Sysadmin Needs to Know-rLgRkjM7amo.en.ass - 31.00 kB<br>|- 37 Linux Shell Aliases - What You Need to Know-vz2DGSBBpXg.mp4 - 31.00 MB<br>|- 37 Linux Shell Aliases - What You Need to Know-vz2DGSBBpXg.en.ass - 22.00 kB<br>|- 36 The Linux ‘script’ Command - Record Your Shell Sessions-tweyWNr6X18.mp4 - 11.60 MB<br>|- 36 The Linux ‘script’ Command - Record Your Shell Sessions-tweyWNr6X18.en.ass - 16.00 kB<br>|- 35 Everything You Need to Know About $PATH in Bash-rJMFxIbDe-g.mp4 - 16.90 MB<br>|- 35 Everything You Need to Know About $PATH in Bash-rJMFxIbDe-g.en.ass - 20.00 kB<br>|- 34 Bash Scripting 7 - Functions and Course Review-9EfN5clA710.mp4 - 27.10 MB<br>|- 34 Bash Scripting 7 - Functions and Course Review-9EfN5clA710.en.ass - 25.00 kB<br>|- 33 Bash Scripting 6 – ‘If’ and Testing-VMZBFjYgjR4.mp4 - 37.40 MB<br>|- 33 Bash Scripting 6 – ‘If’ and Testing-VMZBFjYgjR4.en.ass - 41.00 kB<br>|- 32 Bash Scripting 5 – Arguments-Vbu8rfVaABw.mp4 - 14.70 MB<br>|- 32 Bash Scripting 5 – Arguments-Vbu8rfVaABw.en.ass - 16.00 kB<br>|- 31 Bash Scripting 4 – How Bash Scripts Work-U2_MvxnqLRE.mp4 - 20.80 MB<br>|- 31 Bash Scripting 4 – How Bash Scripts Work-U2_MvxnqLRE.en.ass - 25.00 kB<br>|- 30 Bash Scripting 3 – Variables and Quoting-MYWvVgIL_Ys.mp4 - 33.10 MB<br>|- 30 Bash Scripting 3 – Variables and Quoting-MYWvVgIL_Ys.en.ass - 21.00 kB<br>|- 3 Linux Command-Line for Beginners - Your First 5 Minutes-id3DGvljhT4.mp4 - 28.20 MB<br>|- 3 Linux Command-Line for Beginners - Your First 5 Minutes-id3DGvljhT4.en.ass - 26.00 kB<br>|- 29 Bash Scripting 2 – Bash Basics-4-hw6DPBlsw.mp4 - 20.10 MB<br>|- 28 Bash Scripting 1 - Why Write Bash Scripts-xtS2NiABf54.mp4 - 6.90 MB<br>|- 28 Bash Scripting 1 - Why Write Bash Scripts-xtS2NiABf54.en.ass - 16.00 kB<br>|- 27 Archiving and Compression on Linux - Basic tar Commands-tSRlNwaUgPQ.mp4 - 53.40 MB<br>|- 27 Archiving and Compression on Linux - Basic tar Commands-tSRlNwaUgPQ.en.ass - 36.00 kB<br>|- 26 Basic tmux Tutorial, Part 2 – Shared Sessions-norO25P7xHg.mp4 - 15.10 MB<br>|- 26 Basic tmux Tutorial, Part 2 – Shared Sessions-norO25P7xHg.en.ass - 13.00 kB<br>|- 25 Basic tmux Tutorial - Windows, Panes, and Sessions over SSH-BHhA_ZKjyxo.mp4 - 22.20 MB<br>|- 25 Basic tmux Tutorial - Windows, Panes, and Sessions over SSH-BHhA_ZKjyxo.en.ass - 23.00 kB<br>|- 24 Sysadmin Book Review - Networking For Systems Administrators-3cE5jIcYwfY.mp4 - 23.00 MB<br>|- 24 Sysadmin Book Review - Networking For Systems Administrators-3cE5jIcYwfY.en.ass - 17.00 kB<br>|- 23 Sysadmin Training - Where to find Answers to Technical Questions-kXWZz8RcW4o.mp4 - 56.90 MB<br>|- 23 Sysadmin Training - Where to find Answers to Technical Questions-kXWZz8RcW4o.en.ass - 28.00 kB<br>|- 22 Linux Basics – Scheduling Tasks with Cron-8j0SWYNglcw.mp4 - 32.00 MB<br>|- 22 Linux Basics – Scheduling Tasks with Cron-8j0SWYNglcw.en.ass - 24.00 kB<br>|- 21 Linux Sysadmin Basics – Linux File Types-EDgkcvOoY8A.mp4 - 15.90 MB<br>|- 21 Linux Sysadmin Basics – Linux File Types-EDgkcvOoY8A.en.ass - 17.00 kB<br>|- 20 Linux Sysadmin Basics – 7.1 Filesystem Layout-TG5YJe9camA.mp4 - 39.80 MB<br>|- 20 Linux Sysadmin Basics – 7.1 Filesystem Layout-TG5YJe9camA.en.ass - 31.00 kB<br>|- 2 Linux Sysadmin Basics 01 – Setting up a Linux Virtual Machine-OLK49ZTbmWM.mp4 - 26.70 MB<br>|- 2 Linux Sysadmin Basics 01 – Setting up a Linux Virtual Machine-OLK49ZTbmWM.en.ass - 21.00 kB<br>|- 19 Linux Sysadmin Basics – 7 – Filesystem Layout Overview-svh8sSuz5BI.mp4 - 25.40 MB<br>|- 19 Linux Sysadmin Basics – 7 – Filesystem Layout Overview-svh8sSuz5BI.en.ass - 19.00 kB<br>|- 18 Linux Sysadmin Basics – Filesystem Purpose and Absolute_Relative Pathnames-ar37viZGQwk.mp4 - 26.20 MB<br>|- 18 Linux Sysadmin Basics – Filesystem Purpose and Absolute_Relative Pathnames-ar37viZGQwk.en.ass - 17.00 kB<br>|- 17 Linux Sysadmin Basics – 6.3 The _proc Filesystem-0XdjODvsRN8.mp4 - 38.30 MB<br>|- 17 Linux Sysadmin Basics – 6.3 The _proc Filesystem-0XdjODvsRN8.en.ass - 20.00 kB<br>|- 16 Linux Sysadmin Basics – 6.2 State, Niceness, and How to Monitor Processes-vsEJz9aKGKU.mp4 - 58.30 MB<br>|- 16 Linux Sysadmin Basics – 6.2 State, Niceness, and How to Monitor Processes-vsEJz9aKGKU.en.ass - 31.00 kB<br>|- 15 Linux Sysadmin Basics – 6.1 Process Signals-lP7xoqkqDZQ.mp4 - 41.00 MB<br>|- 15 Linux Sysadmin Basics – 6.1 Process Signals-lP7xoqkqDZQ.en.ass - 17.00 kB<br>|- 14 Linux Sysadmin Basics – 6 – Processes Overview-ls5cGi12kGw.mp4 - 48.90 MB<br>|- 14 Linux Sysadmin Basics – 6 – Processes Overview-ls5cGi12kGw.en.ass - 23.00 kB<br>|- 13 Linux Sysadmin Basics – User Account Management-UN1QB5BIvps.mp4 - 63.50 MB<br>|- 13 Linux Sysadmin Basics – User Account Management-UN1QB5BIvps.en.ass - 32.00 kB<br>|- 12 Basic Linux Access Control-WhCIuGjhH-0.mp4 - 18.70 MB<br>|- 12 Basic Linux Access Control-WhCIuGjhH-0.en.ass - 14.00 kB<br>|- 11 Linux Sysadmin Basics – Linux File Permissions-8SkN7UofOww.mp4 - 21.80 MB<br>|- 11 Linux Sysadmin Basics – Linux File Permissions-8SkN7UofOww.en.ass - 22.00 kB<br>|- 10 Linux Sysadmin Basics 05 – Package Management with apt-get-8P-Vek7Vtgg.mp4 - 84.00 MB<br>|- 10 Linux Sysadmin Basics 05 – Package Management with apt-get-8P-Vek7Vtgg.en.ass - 24.00 kB<br>|- 1 Linux Sysadmin Basics – Course Introduction-bju_FdCo42w.mp4 - 31.90 MB<br>|- 1 Linux Sysadmin Basics – Course Introduction-bju_FdCo42w.en.ass - 26.00 kB</p>
+<p><a href="https://bpcam.bemobtrk.com/go/2ceec3aa-1ca2-46d6-b9ff-aaa5c184517c?jno=3472" target="_blank" rel="noopener">How to download</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/tt6491178_rar_2466/" rel="prev" title="tt6491178. rar">
+      <i class="fa fa-chevron-left"></i> tt6491178. rar
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/the_absolute_sound_telarc_sacd_sampler__telarc2005_dst_20_51_3255/" rel="next" title="The Absolute Sound Telarc SACD Sampler 发烧测试天碟 (Telarc.2005) (DST-2.0 5.1)">
+      The Absolute Sound Telarc SACD Sampler 发烧测试天碟 (Telarc.2005) (DST-2.0 5.1) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tutorial"><span class="nav-number">1.</span> <span class="nav-text">tutorial</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">baidupan</p>
+  <div class="site-description" itemprop="description">baidupan</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4255</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">baidupan</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
